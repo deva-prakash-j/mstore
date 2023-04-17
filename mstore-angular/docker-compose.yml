@@ -4,6 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: mstore-app
+    image: mstore-appp
     ports:
       - "5000:80"
