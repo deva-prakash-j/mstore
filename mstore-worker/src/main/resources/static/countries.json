@@ -1,0 +1,1052 @@
+[
+    {
+      "country": "India",
+      "code": "IN",
+      "currency": "INR",
+      "host": "www.amazon.in",
+      "symbol": "₹",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "United States of America",
+      "code": "US",
+      "currency": "USD",
+      "symbol": "$",
+      "host": "www.amazon.com",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          },
+          "Language": {
+            "key": "language"
+          },
+          "Publisher": {
+            "key": "publisher"
+          },
+          "Reading level": {
+            "key": "reading_level"
+          },
+          "Grade Level": {
+            "key": "grade_level"
+          },
+          "Hardcover": {
+            "key": "hardcover"
+          },
+          "Paperback": {
+            "key": "paperback"
+          },
+          "ISBN-10": {
+            "key": "ISBN-10"
+          },
+          "ISBN-13": {
+            "key": "ISBN-13"
+          }
+        }
+      }
+    },
+    {
+      "country": "Australia",
+      "code": "AU",
+      "currency": "AUD",
+      "symbol": "$",
+      "host": "www.amazon.com.au",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Brazil",
+      "code": "BR",
+      "currency": "BRL",
+      "symbol": "R$",
+      "host": "www.amazon.com.br",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Canada",
+      "code": "CA",
+      "currency": "CAD",
+      "symbol": "$",
+      "host": "www.amazon.ca",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "China",
+      "code": "CN",
+      "currency": "CNY",
+      "host": "www.amazon.cn",
+      "symbol": "¥",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "商品尺寸": {
+            "key": "dimensions"
+          },
+          "商品重量": {
+            "key": "weight"
+          },
+          "制造商": {
+            "key": "manufacturer"
+          }
+        }
+      }
+    },
+    {
+      "country": "France",
+      "code": "FR",
+      "currency": "EUR",
+      "host": "www.amazon.fr",
+      "symbol": "€",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Germany",
+      "code": "DE",
+      "currency": "EUR",
+      "host": "www.amazon.de",
+      "symbol": "€",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Italy",
+      "code": "IT",
+      "currency": "EUR",
+      "host": "www.amazon.it",
+      "symbol": "€",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Mexico",
+      "code": "MX",
+      "currency": "MXN",
+      "host": "www.amazon.com.mx",
+      "symbol": "M$",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Netherlands",
+      "code": "NL",
+      "currency": "EUR",
+      "host": "www.amazon.nl",
+      "symbol": "€",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Singapore",
+      "code": "SG",
+      "currency": "SGD",
+      "host": "www.amazon.sg",
+      "symbol": "$",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Spain",
+      "code": "ES",
+      "currency": "EUR",
+      "host": "www.amazon.es",
+      "symbol": "€",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Dimensiones del producto": {
+            "key": "dimensions"
+          },
+          "Fabricante": {
+            "key": "manufacturer"
+          },
+          "Producto en Amazon.es desde": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Departamento": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Turkey",
+      "code": "TR",
+      "currency": "TRY",
+      "host": "www.amazon.com.tr",
+      "symbol": "₺",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Ürün Boyutları": {
+            "key": "dimensions"
+          },
+          "Ürün Ağırlığı": {
+            "key": "weight"
+          },
+          "Üretici": {
+            "key": "manufacturer"
+          },
+          "Satışa Sunulduğu İlk Tarih": {
+            "key": "available_from"
+          },
+          "Model Numarası": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "United Arab Emirates",
+      "code": "AE",
+      "currency": "AED",
+      "host": "www.amazon.ae",
+      "symbol": "د.إ",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "United Kingdom",
+      "code": "GB",
+      "currency": "GBP",
+      "host": "www.amazon.co.uk",
+      "symbol": "£",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Japan",
+      "code": "JP",
+      "currency": "JPY",
+      "host": "www.amazon.jp",
+      "symbol": "¥",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "梱包サイズ": {
+            "key": "dimensions"
+          },
+          "発売日": {
+            "key": "available_from"
+          },
+          "商品の重量": {
+            "key": "weight"
+          }
+        }
+      }
+    },
+    {
+      "country": "Sweden",
+      "code": "SE",
+      "currency": "SEK",
+      "symbol": "kr",
+      "host": "www.amazon.se",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    },
+    {
+      "country": "Poland",
+      "code": "PL",
+      "currency": "Zł",
+      "symbol": "zł",
+      "host": "www.amazon.pl",
+      "productInformation": {
+        "id": [
+          "#detailBullets_feature_div > ul",
+          "#productDetails_detailBullets_sections1",
+          "#productDetails_techSpec_section_1",
+          "#productDetails_techSpec_section_2",
+          "#detailBulletsWrapper_feature_div > ul:nth-child(5)"
+        ],
+        "fields": {
+          "Amazon Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best-sellers rank": {
+            "key": "",
+            "rank": true
+          },
+          "Best Sellers Rank": {
+            "key": "",
+            "rank": true
+          },
+          "Package Dimensions": {
+            "key": "dimensions"
+          },
+          "Product Dimensions": {
+            "key": "dimensions"
+          },
+          "Parcel Dimensions": {
+            "key": "dimensions"
+          },
+          "Item Weight": {
+            "key": "weight"
+          },
+          "Manufacturer": {
+            "key": "manufacturer"
+          },
+          "Release date": {
+            "key": "available_from"
+          },
+          "Date First Available": {
+            "key": "available_from"
+          },
+          "Item model number": {
+            "key": "model_number"
+          },
+          "Department": {
+            "key": "department"
+          }
+        }
+      }
+    }
+  ]
