@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-alpine
+MAINTAINER baeldung.com
+COPY target/mstore-api-0.0.1-SNAPSHOT.jar mstore-api.jar
+ENTRYPOINT ["java","-jar","/mstore-api.jar"]

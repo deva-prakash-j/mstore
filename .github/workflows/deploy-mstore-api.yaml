@@ -1,16 +1,16 @@
-name: Deploy Mstore App
+name: Deploy Mstore Api
 
 defaults:
   run:
-    working-directory: mstore-app
+    working-directory: mstore-api
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'mstore-app/**'
-      - '.github/workflows/deploy-mstore-app.yaml'
+      - 'mstore-api/**'
+      - '.github/workflows/deploy-mstore-api.yaml'
 
 jobs:
       
@@ -19,5 +19,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t devaprakash/mstore-app .
-      - run: docker push devaprakash/mstore-app
+      - run: docker build -t devaprakash/mstore-api .
+      - run: docker push devaprakash/mstore-api
