@@ -1,0 +1,89 @@
+<header class="header header-intro-clearance header-4">
+    <div class="header-top">
+        <div [class]="containerClass">
+            <div class="header-left">
+                <a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a>
+            </div>
+
+            <div class="header-right">
+
+                <ul class="top-menu">
+                    <li>
+                        <a href="javascript:;">Links</a>
+                        <ul class="dropdown-links">
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="javascript:;">USD</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="javascript:;">Eur</a></li>
+                                            <li><a href="javascript:;">Usd</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="javascript:;">English</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="javascript:;">English</a></li>
+                                            <li><a href="javascript:;">French</a></li>
+                                            <li><a href="javascript:;">Spanish</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="login"><a href="javascript:;" (click)="showLoginModal($event)">Sign in / Sign
+                                    up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <div [class]="containerClass">
+            <div class="header-left">
+                <app-mobile-button></app-mobile-button>
+
+                <a routerLink="/" class="logo">
+                    <img src="assets/images/logo.png" alt="Molla Logo" width="105"
+                        height="25">
+                </a>
+            </div>
+
+            <div class="header-center d-none d-lg-flex">
+                <app-header-search></app-header-search>
+            </div>
+
+            <div class="header-right">
+                <!-- <molla-compare-menu></molla-compare-menu> -->
+
+                <app-wishlist-menu></app-wishlist-menu>
+
+                <app-cart-menu></app-cart-menu>
+            </div>
+        </div>
+    </div>
+
+    <div class="sticky-wrapper" [style.height]="utilsService.isSticky? utilsService.stickyHeight + 'px' : '' ">
+        <div class="header-bottom sticky-header" [class.fixed]="utilsService.isSticky">
+            <div [ngClass]="containerClass">
+                <div class="header-left">
+                    <app-category-menu style="display: contents;"></app-category-menu>
+                </div>
+
+                <div class="header-center">
+                    <app-main-menu></app-main-menu>
+                </div>
+
+                <div class="header-right">
+                    <i class="icon-medapps"></i>
+                    <p>Clearance<span class="highlight">&nbsp;Up to 30% Off</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
