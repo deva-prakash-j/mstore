@@ -3,13 +3,10 @@ import { sliderOpt } from 'src/app/shared/data';
 export const introSlider = {
     ...sliderOpt,
     nav: false,
+    autoplayTimeout: 5000,
+    autoplay: true,
     dots: true,
-    loop: true,
-    responsive: {
-        992: {
-            nav: true
-        }
-    }
+    loop: true
 }
 
 export const brandSlider = {
@@ -43,7 +40,7 @@ export const brandSlider = {
 
 export const newSlider = {
     ...sliderOpt,
-    nav: true, 
+    nav: false, 
     dots: false,
     margin: 20,
     loop: false,

@@ -13,6 +13,7 @@ export class MainBannerCarouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.introSlider)
   }
 
 }

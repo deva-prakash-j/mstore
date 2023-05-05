@@ -34,13 +34,10 @@ $dot-full-background-active:	$primary-color !default;
 
 		[class*='owl-'] {
 			position: absolute;
-			top: 0;
-			z-index: 99;
+			z-index: 500;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: $nav-full-width;
-			height: $nav-full-height;
 			margin: 0;
 			color: $nav-full-color;
 			font-size: $nav-full-font-size;
@@ -48,10 +45,14 @@ $dot-full-background-active:	$primary-color !default;
 			padding: 0;
 			text-align: center;
 			border: none;
-			// background: $nav-full-background;
 			cursor: pointer;
-			// border-radius: $nav-full-rounded;
 			transition: all 0.3s ease;
+			border-radius:50%;
+			background-color:#fff;
+			box-shadow:0 4px 4px rgba(0,0,0,.3),0 0 4px rgba(0,0,0,.2);
+			height: 40px !important;
+			width: 40px !important;
+			top: 48% !important;
 
 			i {
 				margin-top: .1rem;
@@ -59,8 +60,7 @@ $dot-full-background-active:	$primary-color !default;
 
 			&:hover,
 			&:focus {
-				color:$nav-full-color-hover;
-				background: $nav-full-background-hover;
+				background: none !important;
 				text-decoration: none;
 				outline: none !important;
 			}
@@ -91,10 +91,11 @@ $dot-full-background-active:	$primary-color !default;
 		}
 
 		.owl-prev {
-			left: 0;
+			left: -2%;
 		}
 
 		.owl-next {
+			left: 98%;
 			right: 0;
 
 			&:before {
@@ -182,8 +183,8 @@ $dot-full-background-active:	$primary-color !default;
 
 				&:hover,
 				&:focus {
-					color:$nav-full-color-hover;
-					background: $nav-full-background-hover;
+					//color:$nav-full-color-hover;
+					//background: $nav-full-background-hover;
 				}
 			}
 		}
