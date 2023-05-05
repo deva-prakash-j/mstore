@@ -2,8 +2,11 @@
   <app-main-banner-carousel></app-main-banner-carousel>
   <app-popular-categories></app-popular-categories>
   <div class="mb-4"></div>
+  <app-new-collection [loaded]="loaded" [products]="products"></app-new-collection>
+  <div class="mb-3"></div>
   <app-brands></app-brands>
+  <app-trending [loaded]="loaded" [products]="products"></app-trending>
   <div class="mb-5"></div>
-  <app-recommend-collection></app-recommend-collection>
+  <app-recommend-collection [loaded]="loaded" [products]="products"></app-recommend-collection>
   <app-feature></app-feature>
 </main>

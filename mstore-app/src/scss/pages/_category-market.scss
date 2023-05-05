@@ -315,24 +315,24 @@
         letter-spacing: -.025em;
     }
 
-    .owl-nav-top.owl-simple .owl-nav {
-        position: absolute;
-        right: -.5rem;
-        top: -6rem;
-        display: flex;
-        align-items: center;
+    // .owl-nav-top.owl-simple .owl-nav {
+    //     position: absolute;
+    //     right: -.5rem;
+    //     top: -6rem;
+    //     display: flex;
+    //     align-items: center;
 
-        [class*='owl-'] {
-            position: static;
-            left: auto;
-            right: auto;
-            top: auto;
-            bottom: auto;
-            width: auto;
-            height: auto;
-            margin-top: 0;
-        }
-    }
+    //     [class*='owl-'] {
+    //         position: static;
+    //         left: auto;
+    //         right: auto;
+    //         top: auto;
+    //         bottom: auto;
+    //         width: auto;
+    //         height: auto;
+    //         margin-top: 0;
+    //     }
+    // }
 
     .toolbox {
         color: #666666;

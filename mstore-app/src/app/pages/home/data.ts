@@ -75,13 +75,16 @@ export const trendySlider = {
     loop: false,
     responsive: {
         0: {
-            items:2
+            items:2,
+            nav: false
         },
         480: {
-            items:2
+            items:2,
+            nav: false
         },
         768: {
-            items:3
+            items:3,
+            nav: false
         },
         992: {
             items:4

@@ -1,76 +1,50 @@
-<!-- <div class="product product-2">
-    <figure class="product-media">
-        <span class="product-label label-circle label-new" *ngIf="product.new">New</span>
+<div class="product product-2" *ngIf="product">
+    <div>
+        <!-- <span class="product-label label-circle label-new" *ngIf="product.new">New</span>
         <span class="product-label label-circle label-sale" *ngIf="product.sale_price">Sale</span>
         <span class="product-label label-circle label-top" *ngIf="product.top">Top</span>
         <span class="product-label label-circle label-out" *ngIf="!product.stock || product.stock == 0">Out Of
-            Stock</span>
+            Stock</span> -->
 
-        <a [routerLink]="['/product/default/'+ product.slug]">
-            <molla-image [src]="SERVER_URL + product.sm_pictures[0].url" alt="Product" class="product-image">
-            </molla-image>
-            <molla-image [src]="SERVER_URL + product.sm_pictures[1].url" alt="Product" class="product-image-hover"
-                *ngIf="product.sm_pictures[1]"></molla-image>
+        <a [routerLink]="['/product/default/'+ product?.asin]">
+          <ng-template *ngIf="product?.imagesObj?.images && product?.imagesObj?.images.length > 0"></ng-template>
+            <img [src]="product?.imagesObj?.images[0].url + '?h=277&w=277&fit=fill'" alt="Product" class="product-image"/>
         </a>
 
-        <div class="product-action-vertical">
-            <a href="javascript:;" class="btn-product-icon btn-wishlist"
-                [class.added-to-wishlist]="isInWishlist()" (click)="addToWishlist($event)">
-                <span>{{ isInWishlist() ? 'go' : 'add' }} to Wishlist</span>
+        <div class="product-action product-action-dark">
+            <a [routerLink]="['/product/default/']" class="btn-product btn-cart btn-select">
             </a>
+            <a href="javascript:;" class="btn-product btn-wishlist" [class.added-to-wishlist]="true" title="Quick view"></a>
         </div>
-
-        <div class="product-action product-action-dark" *ngIf="product.stock && product.stock !== 0 else outBlock">
-            <a [routerLink]="['/product/default/'+ product.slug]" class="btn-product btn-cart btn-select"
-                *ngIf="product.variants.length > 0 else cartBlock">
-            </a>
-            <ng-template #cartBlock>
-                <button class="btn-product btn-cart" (click)="addToCart($event)">
-                </button>
-            </ng-template>
-            <a href="javascript:;" class="btn-product btn-quickview" title="Quick view"
-                (click)="quickView( $event )"></a>
-        </div>
-
-        <ng-template #outBlock>
-            <a href="javascript:;" class="btn-product btn-quickview" title="Quick view"
-                (click)="quickView( $event )"></a>
-        </ng-template>
-    </figure>
+    </div>
 
     <div class="product-body">
         <div class="product-cat">
-            <span *ngFor="let cat of product.category; let i =index">
-                <a [routerLink]="['/shop/sidebar/list']" [queryParams]="{category: cat.slug}">{{ cat.name }}</a>{{ i < product.category.length - 1 ? ',' : '' }}
+            <span>
+                <a [routerLink]="['/shop/sidebar/list']">{{ product?.category }}</a>
             </span>
         </div>
 
         <h3 class="product-title">
-            <a [routerLink]="['/product/default/'+ product.slug]">{{ product.name }}</a>
+            <a [routerLink]="['/product/default/']">{{ product?.title }}</a>
         </h3>
 
-        <div class="product-price" *ngIf="!product.stock || product.stock == 0 else elseBlock">
+        <!-- <div class="product-price" *ngIf="!product.stock || product.stock == 0 else elseBlock">
             <span class="out-price">${{ product.price.toFixed(2) }}</span>
-        </div>
+        </div> -->
 
-        <ng-template #elseBlock>
-            <div class="product-price" *ngIf="minPrice == maxPrice else elseBlock">${{ minPrice.toFixed(2) }}</div>
-            <ng-template #elseBlock>
-                <div class="product-price" *ngIf="product.variants.length == 0 else elseBlock">
-                    <span class="new-price">${{ minPrice.toFixed(2) }}</span>
-                    <span class="old-price">${{ maxPrice.toFixed(2) }}</span>
+            <!-- <div class="product-price" *ngIf="!product.price.discounted else elseBlock">₹{{ product.price.currentPrice }}</div> -->
+                <div class="product-price">
+                    <span class="new-price">₹{{ product.price.currentPrice }}</span>
+                    <span class="old-price" *ngIf="product.price.discounted">₹{{ product.price.beforePrice }}</span>
+                    <!-- <span class="old-price no-text-dec" style="font-size: 11px;" *ngIf="product.price.discounted && product.price.savingsPercent && !product.price.savingsPercent.startsWith('0')">({{ product.price.savingsPercent }}% off)</span> -->
                 </div>
-                <ng-template #elseBlock>
-                    <div class="product-price">${{minPrice.toFixed(2)}}&ndash;${{maxPrice.toFixed(2)}}</div>
-                </ng-template>
-            </ng-template>
-        </ng-template>
         <div class="ratings-container">
             <div class="ratings">
-                <div class="ratings-val" [style.width]="product.ratings * 20 + '%'"></div>
-                <span class="tooltip-text">{{ product.ratings.toFixed(2) }}</span>
+                <div class="ratings-val" [style.width]="rating * 20 + '%'"></div>
+                <span class="tooltip-text">{{ rating.toFixed(2) }}</span>
             </div>
-            <span class="ratings-text">( {{ product.review }} Reviews )</span>
+            <span class="ratings-text">( {{ product.rating.totalReview }} Reviews )</span>
         </div>
     </div>
-</div> -->
+</div>

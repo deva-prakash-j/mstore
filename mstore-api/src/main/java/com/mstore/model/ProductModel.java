@@ -21,17 +21,17 @@ public class ProductModel {
   private String brand;
   private ArrayList<String> featureBullets;
   private HashMap<String, String> techSpecs;
-  private ImagesEntity images;
+  private ImagesEntity imagesObj;
 
   public void setAsin(String asin) {
     this.asin = asin;
     this.id = asin;
   }
 
-  public void setImages(ArrayList<ImagesEntity> variants) {
+  public void setImagesObj(ArrayList<ImagesEntity> variants) {
     for (ImagesEntity img : variants) {
       if (img.getAsin().equalsIgnoreCase(this.asin)) {
-        this.images = img;
+        this.imagesObj = img;
         return;
       }
     }

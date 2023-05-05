@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Product } from 'src/app/shared/model/product.model';
 
 @Component({
   selector: 'app-recommend-collection',
@@ -7,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RecommendCollectionComponent implements OnInit {
 
-  @Input() loaded = true;
+  @Input() loaded = false;
+  @Input() products:Product[] = [];
+
   constructor() { }
 
   ngOnInit(): void {

@@ -32,52 +32,52 @@ $dot-background-active:	#cccccc !default;
 
 .owl-theme {
 	// Styling Next and Prev buttons
-	.owl-nav {
-		margin-top: 0;
-		text-align: center;
-		-webkit-tap-highlight-color: transparent;
+	// .owl-nav {
+	// 	margin-top: 0;
+	// 	text-align: center;
+	// 	-webkit-tap-highlight-color: transparent;
 
-		[class*='owl-'] {
-			position: absolute;
-			top: 50%;
-			z-index: 99;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: $nav-width;
-			height: $nav-height;
-			margin: 0;
-			margin-top: -$nav-height / 2;
-			color: $nav-color;
-			font-size: $nav-font-size;
-			line-height: 1;
-			padding: 0;
-			border: .1rem solid $nav-border;
-			background: $nav-background;
-			cursor: pointer;
-			border-radius: $nav-rounded;
-			transition: all 0.3s ease;
+	// 	[class*='owl-'] {
+	// 		position: absolute;
+	// 		top: 50%;
+	// 		z-index: 99;
+	// 		display: flex;
+	// 		align-items: center;
+	// 		justify-content: center;
+	// 		width: $nav-width;
+	// 		height: $nav-height;
+	// 		margin: 0;
+	// 		margin-top: -$nav-height / 2;
+	// 		color: $nav-color;
+	// 		font-size: $nav-font-size;
+	// 		line-height: 1;
+	// 		padding: 0;
+	// 		border: .1rem solid $nav-border;
+	// 		background: $nav-background;
+	// 		cursor: pointer;
+	// 		border-radius: $nav-rounded;
+	// 		transition: all 0.3s ease;
 
-			&:not(.disabled):hover {
-				color:$nav-color-hover;
-				border-color: $nav-border-hover;
-				background: $nav-background-hover;
-				text-decoration: none;
-			}
-		}
-		.disabled {
-			opacity: $nav-disabled-opacity;
-			cursor: default;
-		}
+	// 		&:not(.disabled):hover {
+	// 			color:$nav-color-hover;
+	// 			border-color: $nav-border-hover;
+	// 			background: $nav-background-hover;
+	// 			text-decoration: none;
+	// 		}
+	// 	}
+	// 	.disabled {
+	// 		opacity: $nav-disabled-opacity;
+	// 		cursor: default;
+	// 	}
 
-		.owl-prev {
-			left: -50px;
-		}
+	// 	.owl-prev {
+	// 		left: -50px;
+	// 	}
 
-		.owl-next {
-			right: -50px;
-		}
-	}
+	// 	.owl-next {
+	// 		right: -50px;
+	// 	}
+	// }
 
 	// Styling dots
 	.owl-nav.disabled + .owl-dots {

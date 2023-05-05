@@ -289,13 +289,18 @@
 }
 
 .new-price {
-	color: #ef837b;
+	color: $primary-color;
 	margin-right: .8rem;
 }
 
 .old-price {
 	color: #cccccc;
 	text-decoration: line-through;
+	margin-right: 0.8rem;
+}
+
+.no-text-dec {
+	text-decoration: none !important;
 }
 
 .out-price {
@@ -478,7 +483,6 @@
 }
 
 .product-action {
-	position: absolute;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -1644,6 +1648,14 @@
 	&:hover,
 	&:focus {
 		z-index: 10;
+	}
+}
+
+.btn-wishlist {
+	&.added-to-wishlist {
+		&::before {
+			color: $primary-color;
+		}
 	}
 }
 

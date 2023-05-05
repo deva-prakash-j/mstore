@@ -27,7 +27,7 @@ public class ProductsService {
     for (ProductsEntity prod : productList) {
       productModel = new ProductModel();
       BeanUtils.copyProperties(prod, productModel);
-      productModel.setImages(prod.getProductVariants());
+      productModel.setImagesObj(prod.getProductVariants());
       result.add(productModel);
     }
     return result;

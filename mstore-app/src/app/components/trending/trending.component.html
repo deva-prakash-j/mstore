@@ -1,0 +1,46 @@
+<div class="bg-light pt-5 pb-5">
+    <div class="container trending">
+        <div class="heading heading-flex mb-3">
+            <div class="heading-left" contentAnim aniName="blurIn">
+                <h2 class="title">Top Selling Products</h2>
+            </div>
+
+            <div class="heading-right">
+                <ul class="nav nav-pills nav-border-anim justify-content-center" role="tablist" tabClick>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="javascript:;" role="tab" (click)="nav.select('all')">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:;" role="tab" (click)="nav.select('accessories')">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:;" role="tab" (click)="nav.select('cameras')">Cameras & Camcorders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:;" role="tab" (click)="nav.select('computers')">Computers & Tablets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:;" role="tab" (click)="nav.select('entertainment')">Entertainment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <ul ngbNav #nav="ngbNav" class="tab-content-carousel just-action-icons-sm" #tab [destroyOnHide]="false">
+            <li [ngbNavItem]="cat[0]" *ngFor="let cat of categories">
+                <ng-template ngbNavContent>
+                    <owl-carousel [options]="sliderOption" carouselClasses="owl-full carousel-equal-height carousel-with-shadow" *ngIf="!loaded else elseBlock">
+                        <div class="skel-pro" *ngFor="let item of [1,2,3,4,5]"></div>
+                    </owl-carousel>
+                    <ng-template #elseBlock>
+                        <owl-carousel [options]="sliderOption" carouselClasses="owl-full carousel-equal-height carousel-with-shadow">
+                            <app-product-card [product]="product" *ngFor="let product of products"></app-product-card>
+                            <!-- <molla-product-twelve [product]="product" *ngFor="let product of products | catFilter : cat"></molla-product-twelve> -->
+                        </owl-carousel>
+                    </ng-template>
+                </ng-template>
+            </li>      
+        </ul>
+        <div [ngbNavOutlet]="nav"></div>
+    </div>
+</div>

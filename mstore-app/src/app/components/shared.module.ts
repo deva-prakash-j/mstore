@@ -24,6 +24,12 @@ import { FeatureComponent } from './feature/feature.component';
 import { ImageComponent } from './image/image.component';
 import { RecommendCollectionComponent } from './recommend-collection/recommend-collection.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { BgParallaxDirective } from '../shared/directives/bg-parallax.directive';
+import { ContentAnimDirective } from '../shared/directives/content-anim.directive';
+import { TabClickDirective } from '../shared/directives/custom-tab-click.directive';
+import { ProductHoverDirective } from '../shared/directives/product-hover.directive';
+import { TrendingComponent } from './trending/trending.component';
+import { NewCollectionComponent } from './new-collection/new-collection.component';
 
 
 @NgModule({
@@ -46,7 +52,13 @@ import { ProductCardComponent } from './product-card/product-card.component';
     FeatureComponent,
     ImageComponent,
     RecommendCollectionComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    BgParallaxDirective,
+    ContentAnimDirective,
+    TabClickDirective,
+    ProductHoverDirective,
+    TrendingComponent,
+    NewCollectionComponent
   ],
   imports: [
     CommonModule,
@@ -66,7 +78,11 @@ import { ProductCardComponent } from './product-card/product-card.component';
     MobileMenuComponent,
     FooterComponent,
     HomeComponent,
-    ImageComponent
+    ImageComponent,
+    BgParallaxDirective,
+    ContentAnimDirective,
+    TabClickDirective,
+    ProductHoverDirective
   ]
 })
 export class SharedModule { }
