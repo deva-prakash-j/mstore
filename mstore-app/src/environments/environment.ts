@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  mstore_api_url: 'http://localhost:8080/',
+  mstore_api_url: 'http://mstore-api.deva-prakash.tech/',
   recommended_product_endpoint: 'recommended'
 };
 

@@ -13,6 +13,8 @@ export const brandSlider = {
     ...sliderOpt,
     nav: false,
     dots: false,
+    autoplayTimeout: 2000,
+    autoplay: true,
     margin: 0,
     responsive: {
         0: {
@@ -32,7 +34,6 @@ export const brandSlider = {
         },
         1360: {
             items: 6,
-            nav: true,
             margin: 30
         }
     }
