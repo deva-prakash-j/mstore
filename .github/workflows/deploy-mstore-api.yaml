@@ -45,7 +45,7 @@ jobs:
             "mongoDatabase=${{ env.mongoDatabase }}"
       - name: Webhook
         uses: distributhor/workflow-webhook@v3
-        with:
-        webhook_type: 'form-urlencoded'
-        webhook_url: "http://ci.deva-prakash.tech/hooks/deploy-mstore-app"
-        data: 'userId=${{env.userId}}&msg=${{env.commitMsg}}'
+        env:
+          webhook_type: 'form-urlencoded'
+          webhook_url: "http://ci.deva-prakash.tech/hooks/deploy-mstore-app"
+          data: 'userId=${{env.userId}}&msg=${{env.commitMsg}}'
