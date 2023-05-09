@@ -20,7 +20,6 @@ jobs:
       mongoURI: ${{ secrets.mongoURI }}
       mongoDatabase: ${{ secrets.mongoDatabase }}
     steps:
-      - run: cwd
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
