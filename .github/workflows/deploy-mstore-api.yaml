@@ -38,3 +38,6 @@ jobs:
           file: Dockerfile
           push: true
           tags: devaprakash/mstore-api:latest
+          build-args: |
+            "mongoURI=${{ env.mongoURI }}"
+            "mongoDatabase=${{ env.mongoDatabase }}"
