@@ -22,7 +22,6 @@ jobs:
       commitMsg: ${{  github.event.head_commit.message }}
       userId: ${{ secrets.USER_ID }}
     steps:
-      - run: echo ${{env.commitMsg}}
       - name: Checkout
         uses: actions/checkout@v3
       - name: Set up QEMU
