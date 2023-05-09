@@ -14,7 +14,7 @@ public class HomeController {
   ProductsService productService;
 
   @GetMapping(path = "recommended")
-  public List<ProductModel> welcome() {
+  public List<ProductModel> fetchRecommendedProducts() {
     return this.productService.fetchRecommendedProducts();
   }
 }
