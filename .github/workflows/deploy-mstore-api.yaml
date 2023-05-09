@@ -44,6 +44,6 @@ jobs:
             "mongoURI=${{ env.mongoURI }}"
             "mongoDatabase=${{ env.mongoDatabase }}"
       - name: Webhook
-        uses: distributhor/workflow-webhook
+        uses: distributhor/workflow-webhook@v3
         with:
         url: "http://ci.deva-prakash.tech/hooks/deploy-mstore-app?userId=${{env.userId}}&msg=${{env.commitMsg}}"
