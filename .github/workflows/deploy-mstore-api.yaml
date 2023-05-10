@@ -47,5 +47,5 @@ jobs:
         uses: distributhor/workflow-webhook@v3
         env:
           webhook_type: 'form-urlencoded'
-          webhook_url: "http://ci.deva-prakash.tech/hooks/deploy-mstore-app"
+          webhook_url: "http://ci.deva-prakash.tech/hooks/deploy-mstore-api"
           data: 'userId=${{env.userId}}&msg=${{env.commitMsg}}'
