@@ -27,5 +27,6 @@ jobs:
       - name: Webhook
         uses: distributhor/workflow-webhook@v3
         env:
+          webhook_type: 'json'
           webhook_url: "http://ci.deva-prakash.tech/hooks/deploy-mstore-api"
           data: '{ "userId": "${{env.userId}}", "msg" : "${{env.commitMsg}}" }'
