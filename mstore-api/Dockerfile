@@ -7,6 +7,13 @@ ARG cfDeliveryApiToken
 
 FROM maven:3.6.0-jdk-8-alpine AS build
 
+ARG mongoURI
+ARG mongoDatabase
+ARG cfSpaceId
+ARG cfEnvironmentId
+ARG cfManagementApiToken
+ARG cfDeliveryApiToken
+
 ENV mongoURI=${mongoURI}
 ENV mongoDatabase=${mongoDatabase}
 ENV cfSpaceId=${cfSpaceId}
