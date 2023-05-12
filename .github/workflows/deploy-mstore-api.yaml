@@ -5,12 +5,7 @@ defaults:
     working-directory: mstore-api
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'mstore-api/**'
-      - '.github/workflows/deploy-mstore-api.yaml'
+  workflow_dispatch:
 
 jobs:
       
