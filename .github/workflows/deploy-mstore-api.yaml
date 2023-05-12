@@ -12,10 +12,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      mongoURI: ${{ secrets.mongoURI }}
-      mongoDatabase: ${{ secrets.mongoDatabase }}
-      commitMsg: ${{  github.event.head_commit.message }}
+      mongoURI: ${{ secrets.MONGO_URI }}
+      mongoDatabase: ${{ secrets.MONGO_DATABASE }}
       userId: ${{ secrets.USER_ID }}
+      cfSpaceId: ${{ secrets.CF_SPACE_ID }}
+      cfEnvironmentId: ${{ secrets.CF_ENVIRONMENT_ID }}
+      cfManagementApiToken: ${{ secrets.CF_MANAGEMENT_API_TOKEN }}
+      cfDeliveryApiToken: ${{ secrets.CF_DELEVERY_API_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -38,8 +41,12 @@ jobs:
           build-args: |
             "mongoURI=${{ env.mongoURI }}"
             "mongoDatabase=${{ env.mongoDatabase }}"
+            "cfSpaceId=${{ env.cfSpaceId }}"
+            "cfEnvironmentId=${{ env.cfEnvironmentId }}"
+            "cfManagementApiToken=${{ env.cfManagementApiToken }}"
+            "cfDeliveryApiToken=${{ env.cfDeliveryApiToken }}"
       - name: Webhook
         uses: distributhor/workflow-webhook@v3
         env:
           webhook_url: "http://ci.deva-prakash.tech/hooks/deploy-mstore-api"
-          data: '{ "userId": "${{env.userId}}", "msg" : "${{env.commitMsg}}" }'
+          data: '{ "userId": "${{env.userId}}" }'
