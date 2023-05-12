@@ -20,6 +20,7 @@ jobs:
       cfManagementApiToken: ${{ secrets.CF_MANAGEMENT_API_TOKEN }}
       cfDeliveryApiToken: ${{ secrets.CF_DELEVERY_API_TOKEN }}
     steps:
+      - run: echo "${{env.mongoURI}} - ${{env.mongoDatabase}}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Set up QEMU
