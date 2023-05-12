@@ -29,6 +29,13 @@ RUN mvn -f /home/app/pom.xml clean package
 
 FROM openjdk:8-jdk-alpine
 
+ARG mongoURI
+ARG mongoDatabase
+ARG cfSpaceId
+ARG cfEnvironmentId
+ARG cfManagementApiToken
+ARG cfDeliveryApiToken
+
 ENV mongoURI=${mongoURI}
 ENV mongoDatabase=${mongoDatabase}
 ENV cfSpaceId=${cfSpaceId}
