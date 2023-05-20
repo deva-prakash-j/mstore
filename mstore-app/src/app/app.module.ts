@@ -32,6 +32,7 @@ import { SharedModule } from './components/shared.module';
     }),
     SharedModule
   ],
+  exports: [SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })

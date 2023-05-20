@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { introSlider } from '../../pages/home/data';
+import { Banner } from 'src/app/shared/model/home.model';
+
 
 @Component({
   selector: 'app-main-banner-carousel',
@@ -8,12 +10,19 @@ import { introSlider } from '../../pages/home/data';
 })
 export class MainBannerCarouselComponent implements OnInit {
 
+  @Input() bannerObj: Banner;
   introSlider = introSlider;
   
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
-    console.log(this.introSlider)
+    
+  }
+
+  getUrl(url): string {
+    url += "?fm=jpg&fl=progressive";
+    return url;
   }
 
 }

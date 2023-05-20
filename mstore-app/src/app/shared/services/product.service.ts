@@ -14,6 +14,13 @@ export class ProductService {
    * Get Recommended Products
    */
   public fetchRecommendedProducts(): Observable<any> {
-    return this.http.get(`${environment.mstore_api_url}${environment.recommended_product_endpoint}`);
+    return this.http.get(`${environment.mstoreApiUrl}${environment.recommendedProductEndpoint}`);
+  }
+
+  public fetchModelData(name): Observable<any> {
+    let params = {
+      'name': name
+    };
+    return this.http.get(`${environment.mstoreApiUrl}${environment.modelDataEndpoint}`, {params});
   }
 }

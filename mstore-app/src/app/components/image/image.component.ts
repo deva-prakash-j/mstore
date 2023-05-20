@@ -15,6 +15,7 @@ export class ImageComponent implements OnInit {
 	@Input() minHeight: string;
 	@Input() alt = 'banner';
 	@Input() backgroundColor: string;
+	@Input() class: string;
 
 	defaultImage = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
