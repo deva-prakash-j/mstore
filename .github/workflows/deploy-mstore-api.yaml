@@ -19,6 +19,7 @@ jobs:
       cfEnvironmentId: ${{ secrets.CF_ENVIRONMENT_ID }}
       cfManagementApiToken: ${{ secrets.CF_MANAGEMENT_API_TOKEN }}
       cfDeliveryApiToken: ${{ secrets.CF_DELEVERY_API_TOKEN }}
+      newRelicKey: ${{ secrets.NEW_RELIC_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -45,6 +46,7 @@ jobs:
             "cfEnvironmentId=${{ env.cfEnvironmentId }}"
             "cfManagementApiToken=${{ env.cfManagementApiToken }}"
             "cfDeliveryApiToken=${{ env.cfDeliveryApiToken }}"
+            "newRelicKey=${{ env.newRelicKey }}"
       - name: Webhook
         uses: distributhor/workflow-webhook@v3
         env:

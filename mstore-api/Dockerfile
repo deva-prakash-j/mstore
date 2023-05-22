@@ -4,6 +4,7 @@ ARG cfSpaceId
 ARG cfEnvironmentId
 ARG cfManagementApiToken
 ARG cfDeliveryApiToken
+ARG newRelicKey
 
 FROM maven:3.6.0-jdk-8-alpine AS build
 
@@ -36,6 +37,7 @@ ARG cfSpaceId
 ARG cfEnvironmentId
 ARG cfManagementApiToken
 ARG cfDeliveryApiToken
+ARG newRelicKey
 
 ENV mongoURI=${mongoURI}
 ENV mongoDatabase=${mongoDatabase}
@@ -44,7 +46,7 @@ ENV cfEnvironmentId=${cfEnvironmentId}
 ENV cfManagementApiToken=${cfManagementApiToken}
 ENV cfDeliveryApiToken=${cfDeliveryApiToken}
 ENV NEW_RELIC_APP_NAME="mstore-api"
-ENV NEW_RELIC_LICENSE_KEY="f27ab6c60732902b793c5ca5e5df4bff005aNRAL"
+ENV NEW_RELIC_LICENSE_KEY=${newRelicKey}
 ENV NEW_RELIC_LOG_FILE_NAME="STDOUT"
 
 COPY newrelic/newrelic.jar  /usr/local/lib/newrelic.jar
