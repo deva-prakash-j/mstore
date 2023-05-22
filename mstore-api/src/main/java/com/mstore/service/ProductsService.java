@@ -32,4 +32,8 @@ public class ProductsService {
     }
     return result;
   }
+
+  public List<ProductsEntity> fetchHeaderData() {
+    return repo.fetchHeaderData();
+  }
 }

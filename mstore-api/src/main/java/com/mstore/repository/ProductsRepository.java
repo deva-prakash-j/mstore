@@ -22,4 +22,11 @@ public interface ProductsRepository extends MongoRepository<ProductsEntity, Stri
   @Query("{productVariants : []}")
   List<ProductsEntity> getProductsWithEmptyProductVariants();
 
+  @Aggregation(pipeline = {"{ $facet: {\r\n"
+      + "      categories: [{ $group: { _id: \"categories\", categories:{$addToSet:\"$category\"} } }, { \"$project\": {_id: 0}}],\r\n"
+      + "      brands:     [{ $group: { _id: \"brands\",    brands:{$addToSet:\"$brand\"} } }, { \"$project\": {_id: 0}}],\r\n"
+      + "      brandsWithCategory:[{ $group: { _id: {category: \"$category\", brand:\"$brand\"}, \"count\": { \"$sum\": 1 }  } }, { $group: { _id: \"$_id.category\", brands:{$addToSet:\"$_id.brand\"} } }]\r\n"
+      + "  }}"})
+  public List<ProductsEntity> fetchHeaderData();
+
 }

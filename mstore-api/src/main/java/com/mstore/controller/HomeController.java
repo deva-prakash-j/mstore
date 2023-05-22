@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.mstore.entity.ModelsEntity;
+import com.mstore.entity.ProductsEntity;
 import com.mstore.model.ProductModel;
 import com.mstore.service.ModelsService;
 import com.mstore.service.ProductsService;
@@ -27,5 +28,10 @@ public class HomeController {
   @GetMapping(path = "get-model-data")
   public List<ModelsEntity> fetchModelsData(@RequestParam String name) {
     return this.modelsService.fetchModel(name);
+  }
+
+  @GetMapping(path = "get-header-data")
+  public List<ProductsEntity> fetchHeaderData() {
+    return this.productService.fetchHeaderData();
   }
 }

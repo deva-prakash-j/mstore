@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.mstore.model.PriceModel;
 import com.mstore.model.RatingModel;
 import lombok.Data;
@@ -12,6 +13,7 @@ import lombok.ToString;
 @Data
 @ToString
 @Document("products")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProductsEntity {
 
   @Id
@@ -25,7 +27,9 @@ public class ProductsEntity {
   private ArrayList<String> featureBullets;
   private HashMap<String, String> techSpecs;
   private ArrayList<ImagesEntity> productVariants;
-  private boolean mainImageUopdated = false;
+  private ArrayList<Object> categories;
+  private ArrayList<Object> brands;
+  private ArrayList<Object> brandsWithCategory;
 
   public void setAsin(String asin) {
     this.asin = asin;
