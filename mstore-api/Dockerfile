@@ -53,4 +53,4 @@ COPY newrelic/newrelic.jar  /usr/local/lib/newrelic.jar
 COPY newrelic/newrelic.yml  /usr/local/lib/newrelic.yml
 COPY --from=build /home/app/target/mstore-api-0.0.1-SNAPSHOT.jar /usr/local/lib/mstore-api.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-javaagent:/usr/local/lib/newrelic.jar","-jar","/usr/local/lib/mstore-api.jar"]
+ENTRYPOINT ["java","-jar","/usr/local/lib/mstore-api.jar"]
