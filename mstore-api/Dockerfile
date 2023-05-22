@@ -43,9 +43,12 @@ ENV cfSpaceId=${cfSpaceId}
 ENV cfEnvironmentId=${cfEnvironmentId}
 ENV cfManagementApiToken=${cfManagementApiToken}
 ENV cfDeliveryApiToken=${cfDeliveryApiToken}
+ENV NEW_RELIC_APP_NAME="mstore-api"
+ENV NEW_RELIC_LICENSE_KEY="f27ab6c60732902b793c5ca5e5df4bff005aNRAL"
+ENV NEW_RELIC_LOG_FILE_NAME="STDOUT"
 
-ADD newrelic/newrelic.jar  /usr/local/lib/newrelic.jar
-ADD newrelic/newrelic.yml  /usr/local/lib/newrelic.yml
+COPY newrelic/newrelic.jar  /usr/local/lib/newrelic.jar
+COPY newrelic/newrelic.yml  /usr/local/lib/newrelic.yml
 COPY --from=build /home/app/target/mstore-api-0.0.1-SNAPSHOT.jar /usr/local/lib/mstore-api.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/local/lib/mstore-api.jar"]
