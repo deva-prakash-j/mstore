@@ -1,5 +1,6 @@
 package com.mstore.util;
 
+import java.util.HashMap;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -24,5 +25,11 @@ public class CommonUtil {
       respondeEntity = new ResponseEntity<String>(exceptionDetails, httpStatus);
     }
     return respondeEntity;
+  }
+
+  public static ResponseEntity<Object> responseHandler(HttpStatus httpStatus, Object data) {
+    HashMap<String, Object> map = new HashMap<String, Object>();
+    map.put("data", data);
+    return new ResponseEntity<Object>(map, httpStatus);
   }
 }
