@@ -20,6 +20,7 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 @RestControllerAdvice
 public class RestExceptionHandler {
 
+
   private ResponseEntity<String> buildResponseEntity(final HttpStatus httpStatus,
       final Exception ex, final String errorMsg) {
     ex.printStackTrace();
@@ -73,5 +74,4 @@ public class RestExceptionHandler {
   public ResponseEntity<String> handleOtherException(final RuntimeException ex) {
     return buildResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR, ex, Constants.API_ERR_4XX_5XX);
   }
-
 }

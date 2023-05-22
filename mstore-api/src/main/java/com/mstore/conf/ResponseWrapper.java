@@ -1,6 +1,7 @@
 package com.mstore.conf;
 
 import java.util.Date;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
+import com.mstore.model.ResponseErrorModel;
 import com.mstore.model.ResponseModel;
 import com.mstore.model.ResponseSuccessModel;
 
@@ -42,9 +44,28 @@ public class ResponseWrapper implements ResponseBodyAdvice {
     }
     ResponseModel<Object> response = (ResponseModel<Object>) new ResponseSuccessModel();
     Date timestamp = new Date();
+    if (responseData instanceof Map) {
+      final Map<String, Object> obj = (Map<String, Object>) responseData;
+      if (!StringUtils.isEmpty(obj.get("status"))) {
+        final int status = Integer.parseInt(obj.get("status").toString());
+        if (status < 200 || status >= 300) {
+          response = (ResponseModel<Object>) new ResponseErrorModel();
+          timestamp = ((obj.get("timestamp") != null) ? (Date) obj.get("timestamp") : null);
+          ((ResponseErrorModel) response).setCode(status);
+          ((ResponseErrorModel) response)
+              .setMessage(obj.get("message") != null ? (String) obj.get("message") : "");
+          ((ResponseErrorModel) response)
+              .setError(obj.get("error") != null ? (String) obj.get("error") : "");
+          ((ResponseErrorModel) response)
+              .setPath(obj.get("path") != null ? (String) obj.get("path") : "");
+        }
+      }
+    }
     response.setRequestAt(timestamp);
-    ((ResponseSuccessModel) response).setData(responseData);
-    ((ResponseSuccessModel) response).setDuration(duration);
+    if (response instanceof ResponseSuccessModel) {
+      ((ResponseSuccessModel) response).setData(responseData);
+      ((ResponseSuccessModel) response).setDuration(duration);
+    }
     return response;
   }
 
