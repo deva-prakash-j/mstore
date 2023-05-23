@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UrlObject } from 'src/app/shared/model/header.model';
 
 @Component({
   selector: 'app-category-menu',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class CategoryMenuComponent implements OnInit {
 
   constructor() { }
+
+  @Input() brandsList: UrlObject[];
 
   ngOnInit(): void {
   }

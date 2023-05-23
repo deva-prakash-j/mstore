@@ -23,4 +23,8 @@ export class ProductService {
     };
     return this.http.get(`${environment.mstoreApiUrl}${environment.modelDataEndpoint}`, {params});
   }
+
+  public fetchHeaderData(): Observable<any> {
+    return this.http.get(`${environment.mstoreApiUrl}${environment.headerDataEndpoint}`);
+  }
 }

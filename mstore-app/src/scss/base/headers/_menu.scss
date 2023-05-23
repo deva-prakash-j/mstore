@@ -162,7 +162,7 @@
 			}
 		}
 
-		.sf-with-ul {
+		.sf-with-ul-arrow {
 			position: relative;
 
 			&::after {
@@ -436,7 +436,7 @@
 		}
 	}
 
-	.menu.sf-arrows > li > .sf-with-ul::after {
+	.menu.sf-arrows > li > .sf-with-ul-arrow::after {
 		right: 1rem;
 	}
 }

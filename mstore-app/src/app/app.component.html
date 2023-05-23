@@ -1,11 +1,11 @@
 <div class="mobile-menu-overlay" (click)="hideMobileMenu()"></div>
 
-<app-mobile-menu></app-mobile-menu>
+<app-mobile-menu [headerData]="headerData"></app-mobile-menu>
 
 <button id="scroll-top" title="Back to Top" [ngClass]="{show: utilsService.isSticky}"
     (click)="utilsService.scrollTop($event)"><i class="icon-arrow-up"></i></button>
 <div class="page-wrapper">    
-    <app-header [containerClass]="containerClass"></app-header>
+    <app-header [headerData]="headerData" [containerClass]="containerClass"></app-header>
     <div>
      <router-outlet></router-outlet>
     </div>

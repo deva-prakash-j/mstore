@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Header } from 'src/app/shared/model/header.model';
 
 declare var $: any;
 
@@ -12,6 +13,7 @@ declare var $: any;
 export class MobileMenuComponent implements OnInit {
 
 	searchTerm = "";
+	@Input() headerData: Header;
 
 	private subscr: Subscription;
 

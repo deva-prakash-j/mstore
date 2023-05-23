@@ -1,5 +1,5 @@
 <div class="carousel slide mb-5" *ngIf="bannerObj">
     <owl-carousel carouselClasses="intro-slider owl-theme owl-simple owl-nav-inside owl-light" [options]="introSlider">
-            <img *ngFor="let url of bannerObj.main" class="d-block w-100" [defaultImage]="" [lazyLoad]="getUrl(url)" alt="First slide">
+            <app-image *ngFor="let url of bannerObj.main" [class]="'d-block w-100'" [src]="getUrl(url)" alt="First slide"></app-image>
     </owl-carousel>
 </div>

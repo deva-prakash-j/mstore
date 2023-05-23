@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit {
 
   fetchModelDataForHome() {
     this.productService.fetchModelData(environment.homeContentType).subscribe(result => {
-      if(result) {
-        let home: Home = result[0];
+      if(result && result.data) {
+        let home: Home = result.data[0];
         this.bannerObj = home.banner;
         console.log(this.bannerObj);
       }
@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit {
 
   getProducts(): void {
     this.productService.fetchRecommendedProducts().subscribe(result => {
-      if(result) {
-        this.products = result
+      if(result && result.data) {
+        this.products = result.data
         this.loaded = true;
       }
     })

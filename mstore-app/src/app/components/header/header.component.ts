@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Header } from 'src/app/shared/model/header.model';
 import { UtilsService } from 'src/app/shared/services/utils.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { UtilsService } from 'src/app/shared/services/utils.service';
 export class HeaderComponent implements OnInit {
 
   @Input() containerClass = "container";
+  @Input() headerData: Header;
 
   wishCount = 0;
 

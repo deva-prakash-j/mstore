@@ -4,5 +4,6 @@ export const environment = {
   recommendedProductEndpoint: 'recommended',
   contentfulDataEndpoint: 'get-contentful-data',
   homeContentType: 'homePage',
-  modelDataEndpoint: 'get-model-data'
+  modelDataEndpoint: 'get-model-data',
+  headerDataEndpoint: 'get-header-data'
 };

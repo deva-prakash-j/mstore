@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { InnerObject } from 'src/app/shared/model/header.model';
 
 @Component({
   selector: 'app-main-menu',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MainMenuComponent implements OnInit {
 
   current: "/"
+  @Input() brandsWithCategory: InnerObject[]
   
   constructor() { }
 

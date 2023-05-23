@@ -2,6 +2,8 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { UtilsService } from './shared/services/utils.service';
+import { ProductService } from './shared/services/product.service';
+import { Header } from './shared/model/header.model';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +14,11 @@ export class AppComponent implements OnInit, OnDestroy {
   containerClass = 'container';
 	isBottomSticky = false;
 	current = "/";
+	headerData: Header;
 
   private subscr: Subscription;
 
-  constructor(private router: Router, public utilsService: UtilsService) {
+  constructor(private router: Router, public utilsService: UtilsService, public productService: ProductService) {
 		this.subscr = this.router.events.subscribe(event => {
 			if (event instanceof NavigationStart) {
 				this.current = event.url;
@@ -36,6 +39,7 @@ export class AppComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
+		this.fetchHeaderData()
 	}
 
 	ngOnDestroy(): void {
@@ -66,5 +70,17 @@ export class AppComponent implements OnInit, OnDestroy {
 	hideMobileMenu() {
 		document.querySelector('body').classList.remove('mmenu-active');
 		document.querySelector('html').style.overflowX = 'unset';
+	}
+
+	fetchHeaderData() {
+		this.productService.fetchHeaderData().subscribe(result=> {
+			if(result && result.data) {
+				result = result.data[0];
+				let brands = result?.brands;
+				let categories = result?.categories;
+				this.headerData = {brands, categories, brandsWithCategory: result.brandsWithCategory};
+				console.log(this.headerData);
+			}
+		})
 	}
 }
