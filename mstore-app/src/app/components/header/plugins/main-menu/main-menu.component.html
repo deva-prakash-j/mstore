@@ -1,10 +1,10 @@
 <nav class="main-nav">
     <ul class="menu sf-arrows">
         <li class="megamenu-container" [class.active]="current=='/'">
-            <a routerLink="/" class="sf-with-ul sf-with-ul-arrow">Home</a>
+            <a routerLink="/" class="sf-with-ul">Home</a>
         </li>
         <li *ngFor="let cat of brandsWithCategory" [class.active]="current?.includes('blog/mask')">
-            <a routerLink="/blog/mask/grid" class="sf-with-ul no-wrap">{{cat.displayText}}</a>
+            <a routerLink="/blog/mask/grid" class="sf-with-ul no-wrap sf-with-ul-arrow">{{cat.displayText}}</a>
             <ul *ngIf="cat.brands">
                 <li *ngFor="let brand of cat.brands" [class.active]="current?.includes('blog/mask/grid')">
                     <a routerLink="/blog/mask/grid">{{brand.displayText}}</a>

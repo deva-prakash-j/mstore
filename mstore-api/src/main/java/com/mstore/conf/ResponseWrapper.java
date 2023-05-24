@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.MethodParameter;
+import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
@@ -17,6 +18,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import com.mstore.model.ResponseErrorModel;
 import com.mstore.model.ResponseModel;
+import com.mstore.model.ResponsePageableModel;
 import com.mstore.model.ResponseSuccessModel;
 
 @RestControllerAdvice
@@ -60,6 +62,9 @@ public class ResponseWrapper implements ResponseBodyAdvice {
               .setPath(obj.get("path") != null ? (String) obj.get("path") : "");
         }
       }
+    } else if (responseData instanceof Page) {
+      response = (ResponseModel<Object>) new ResponsePageableModel(((Page) responseData));
+      ((ResponsePageableModel) response).setDuration(duration);
     }
     response.setRequestAt(timestamp);
     if (response instanceof ResponseSuccessModel) {
