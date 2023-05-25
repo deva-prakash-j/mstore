@@ -90,12 +90,38 @@ public class FilterBuilderService {
   }
 
   private Criteria buildCriteria(QueryModel condition) {
-    Function<QueryModel, Criteria> function = FILTER_CRITERIA.get(condition.getOperator().name());
+    Function<QueryModel, Criteria> function = null;
+    Criteria crt = null;
+    if (condition.getValue() instanceof List) {
+      crt = new Criteria();
+      List values = (List) condition.getValue();
+      List<Criteria> filteConditions = new ArrayList();
+      values.stream().map(value -> copyQueryModel(condition, value))
+          .map(crit -> filteConditions.add(buildCriteria((QueryModel) crit)))
+          .collect(Collectors.toList());
+      if ("AND".equalsIgnoreCase(condition.getFilterType().toString())) {
+        crt.andOperator(filteConditions.toArray(new Criteria[0]));
+      } else {
+        crt.orOperator(filteConditions.toArray(new Criteria[0]));
+      }
+    } else {
+      function = FILTER_CRITERIA.get(condition.getOperator().name());
+      crt = function.apply(condition);
+    }
 
-    if (function == null) {
+    if (crt == null) {
       throw new IllegalArgumentException("Invalid function param type: ");
     }
 
-    return function.apply(condition);
+    return crt;
+  }
+
+  private QueryModel copyQueryModel(QueryModel condition, Object value) {
+    QueryModel query = new QueryModel();
+    query.setField(condition.getField());
+    query.setFilterType(condition.getFilterType());
+    query.setOperator(condition.getOperator());
+    query.setValue(value);
+    return query;
   }
 }

@@ -30,6 +30,8 @@ public class ProductsEntity {
   private ArrayList<Object> categories;
   private ArrayList<Object> brands;
   private ArrayList<Object> brandsWithCategory;
+  private boolean isOnSale;
+  private boolean isTop;
 
   public void setAsin(String asin) {
     this.asin = asin;
