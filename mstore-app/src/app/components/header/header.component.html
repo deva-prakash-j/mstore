@@ -1,30 +1,42 @@
 <header class="header header-intro-clearance header-4">
-    <div class="header-middle">
-        <div [class]="containerClass">
-            <div class="header-left">
-                <app-mobile-button></app-mobile-button>
+    <div class="sticky-wrapper" *ngIf="headerData" [style.height]="utilsService.isSticky? utilsService.stickyHeight + 'px' : '' ">
+        <div class="header-middle sticky-header" [class.fixed]="utilsService.isSticky">
+            <!-- <div [ngClass]="containerClass">
+                <div class="header-left" *ngIf="headerData?.brands">
+                    <app-category-menu [brandsList]="headerData?.brands" style="display: contents;"></app-category-menu>
+                </div>
 
-                <a routerLink="/" class="logo" style="margin: auto;">
-                    <img src="assets/images/logo.png" alt="Molla Logo" width="140"
-                        height="25">
-                </a>
-            </div>
-
-            <div class="header-center d-none d-lg-flex">
-                <app-header-search></app-header-search>
-            </div>
-
-            <div class="header-right">
-                <!-- <molla-compare-menu></molla-compare-menu> -->
-                <app-wishlist-menu></app-wishlist-menu>
-
-                <app-cart-menu></app-cart-menu>
+                <div class="header-center" *ngIf="headerData?.brandsWithCategory">
+                    <app-main-menu [brandsWithCategory]="headerData?.brandsWithCategory"></app-main-menu>
+                </div>
+            </div> -->
+            <div [class]="containerClass">
+                <div class="header-left">
+                    <app-mobile-button></app-mobile-button>
+    
+                    <a routerLink="/" class="logo" style="margin: auto;">
+                        <img src="assets/images/logo.png" alt="Molla Logo" width="140"
+                            height="25">
+                    </a>
+                </div>
+    
+                <div class="header-center d-none d-lg-flex">
+                    <app-header-search></app-header-search>
+                </div>
+    
+                <div class="header-right">
+                    <!-- <molla-compare-menu></molla-compare-menu> -->
+                    <app-account-menu class="account-icon"></app-account-menu>
+                    <app-wishlist-menu></app-wishlist-menu>
+    
+                    <app-cart-menu></app-cart-menu>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="sticky-wrapper" *ngIf="headerData" [style.height]="utilsService.isSticky? utilsService.stickyHeight + 'px' : '' ">
-        <div class="header-bottom sticky-header" [class.fixed]="utilsService.isSticky">
+        <div class="header-bottom" [class.fixed]="utilsService.isSticky">
             <div [ngClass]="containerClass">
                 <div class="header-left" *ngIf="headerData?.brands">
                     <app-category-menu [brandsList]="headerData?.brands" style="display: contents;"></app-category-menu>

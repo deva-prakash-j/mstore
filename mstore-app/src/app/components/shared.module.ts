@@ -30,6 +30,7 @@ import { TabClickDirective } from '../shared/directives/custom-tab-click.directi
 import { ProductHoverDirective } from '../shared/directives/product-hover.directive';
 import { TrendingComponent } from './trending/trending.component';
 import { NewCollectionComponent } from './new-collection/new-collection.component';
+import { AccountMenuComponent } from './header/plugins/account-menu/account-menu.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { NewCollectionComponent } from './new-collection/new-collection.componen
     TabClickDirective,
     ProductHoverDirective,
     TrendingComponent,
-    NewCollectionComponent
+    NewCollectionComponent,
+    AccountMenuComponent
   ],
   imports: [
     CommonModule,
@@ -82,7 +84,8 @@ import { NewCollectionComponent } from './new-collection/new-collection.componen
     BgParallaxDirective,
     ContentAnimDirective,
     TabClickDirective,
-    ProductHoverDirective
+    ProductHoverDirective,
+    AccountMenuComponent
   ]
 })
 export class SharedModule { }

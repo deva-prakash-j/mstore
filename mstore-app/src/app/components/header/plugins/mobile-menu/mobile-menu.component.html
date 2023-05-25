@@ -36,12 +36,21 @@
                 </ng-template>
             </li>
             <li ngbNavItem>
-                <a ngbNavLink>Brands</a>
-                <ng-template ngbNavContent *ngIf="headerData?.brands">
+                <a ngbNavLink>Account</a>
+                <ng-template ngbNavContent>
                     <div class="mobile-cats-nav">
                         <ul class="mobile-cats-menu">
-                            <li *ngFor="let brand of headerData?.brands" class="item-cats-lead">
-                                <a routerLink="/shop/sidebar/3cols" [queryParams]="{category: 'electronics'}">{{brand.displayText}}</a>
+                            <li  class="item-cats-lead">
+                                <a routerLink="/shop/sidebar/3cols" [queryParams]="{category: 'electronics'}">SignIn</a>
+                            </li>
+                            <li  class="item-cats-lead">
+                                <a routerLink="/shop/sidebar/3cols" [queryParams]="{category: 'electronics'}">SignIn</a>
+                            </li>
+                            <li  class="item-cats-lead">
+                                <a routerLink="/shop/sidebar/3cols" [queryParams]="{category: 'electronics'}">SignIn</a>
+                            </li>
+                            <li  class="item-cats-lead">
+                                <a routerLink="/shop/sidebar/3cols" [queryParams]="{category: 'electronics'}">SignIn</a>
                             </li>
                         </ul>
                     </div>
