@@ -60,7 +60,7 @@ import { AccountMenuComponent } from './header/plugins/account-menu/account-menu
     ProductHoverDirective,
     TrendingComponent,
     NewCollectionComponent,
-    AccountMenuComponent
+    AccountMenuComponent,
   ],
   imports: [
     CommonModule,
@@ -85,7 +85,7 @@ import { AccountMenuComponent } from './header/plugins/account-menu/account-menu
     ContentAnimDirective,
     TabClickDirective,
     ProductHoverDirective,
-    AccountMenuComponent
+    AccountMenuComponent,
   ]
 })
 export class SharedModule { }

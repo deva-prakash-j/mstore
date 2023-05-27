@@ -51,6 +51,13 @@ export class UtilsService {
 		}
 	}
 
+	toggleLoader(action = 'show') {
+		let loader = $('.loading-overlay')
+		if(loader) {
+			action == 'show' ? loader.show() : loader.hide();
+		}
+	}
+
 	/**
 	 * Scrolling to Page content section
 	 */

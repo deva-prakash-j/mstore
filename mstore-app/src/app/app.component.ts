@@ -19,6 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private subscr: Subscription;
 
   constructor(private router: Router, public utilsService: UtilsService, public productService: ProductService) {
+		this.utilsService.toggleLoader()
 		this.subscr = this.router.events.subscribe(event => {
 			if (event instanceof NavigationStart) {
 				this.current = event.url;
@@ -79,7 +80,7 @@ export class AppComponent implements OnInit, OnDestroy {
 				let brands = result?.brands;
 				let categories = result?.categories;
 				this.headerData = {brands, categories, brandsWithCategory: result.brandsWithCategory};
-				console.log(this.headerData);
+				this.utilsService.toggleLoader('hide')
 			}
 		})
 	}
