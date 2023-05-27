@@ -20,9 +20,4 @@ export class MainBannerCarouselComponent implements OnInit {
     
   }
 
-  getUrl(url): string {
-    url += "?fm=jpg&fl=progressive";
-    return url;
-  }
-
 }

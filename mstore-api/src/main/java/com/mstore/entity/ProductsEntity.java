@@ -5,6 +5,7 @@ import java.util.HashMap;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.mstore.model.PriceModel;
 import com.mstore.model.RatingModel;
 import lombok.Data;
@@ -22,8 +23,10 @@ public class ProductsEntity {
   private PriceModel price;
   private RatingModel rating;
   private String category;
+  private String categorySlug;
   private String title;
   private String brand;
+  private String brandSlug;
   private ArrayList<String> featureBullets;
   private HashMap<String, String> techSpecs;
   private ArrayList<ImagesEntity> productVariants;
@@ -31,6 +34,7 @@ public class ProductsEntity {
   private ArrayList<Object> brands;
   private ArrayList<Object> brandsWithCategory;
   private boolean isOnSale;
+  @JsonProperty("isTop")
   private boolean isTop;
 
   public void setAsin(String asin) {

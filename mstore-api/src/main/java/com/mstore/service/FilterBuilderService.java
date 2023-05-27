@@ -12,6 +12,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
+import com.mstore.enums.FilterOperationEnum;
+import com.mstore.enums.FilterTypeEnum;
 import com.mstore.exceptios.BadRequestException;
 import com.mstore.model.QueryModel;
 
@@ -42,6 +44,35 @@ public class FilterBuilderService {
         condition -> Criteria.where(condition.getField()).is(condition.getValue()));
   }
 
+  public List<QueryModel> generateFilterModel(String filter) {
+    String[] arr = filter.split("##");
+    String[] queryArr;
+    String values;
+    List<QueryModel> queryModelList = new ArrayList<QueryModel>();
+    QueryModel queryModel = null;
+    for (String query : arr) {
+      queryModel = new QueryModel();
+      queryArr = query.split("\\$");
+      if (queryArr.length == 3) {
+        queryModel.setField(queryArr[0]);
+        queryModel.setOperator(FilterOperationEnum.fromValue(queryArr[1]));
+        values = queryArr[2];
+        if (values.contains("||")) {
+          queryModel.setFilterType(FilterTypeEnum.fromValue("or"));
+          queryModel.setValue(Stream.of(values.split("\\|\\|", -1)).collect(Collectors.toList()));
+        } else if (values.contains("&&")) {
+          queryModel.setFilterType(FilterTypeEnum.fromValue("and"));
+          queryModel.setValue(Stream.of(values.split("&&", -1)).collect(Collectors.toList()));
+        } else {
+          queryModel.setFilterType(FilterTypeEnum.fromValue("and"));
+          queryModel.setValue(values);
+        }
+        queryModelList.add(queryModel);
+      }
+    }
+    return queryModelList;
+  }
+
   public PageRequest getPageable(int size, int page, String order) {
 
     int pageSize = (size <= 0) ? DEFAULT_SIZE_PAGE : size;
@@ -50,7 +81,7 @@ public class FilterBuilderService {
     try {
       if (order != null && !order.isEmpty()) {
 
-        final String FILTER_CONDITION_DELIMITER = "\\|";
+        final String FILTER_CONDITION_DELIMITER = "\\|\\|";
 
         List<String> values = split(order, FILTER_CONDITION_DELIMITER);
         String column = values.get(0);

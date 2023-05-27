@@ -94,6 +94,7 @@
   			<artifactId>java-sdk</artifactId>
   			<version>10.5.14</version>
 		</dependency>
+		
 	</dependencies>
 
 	<build>

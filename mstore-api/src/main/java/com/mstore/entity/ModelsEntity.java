@@ -15,6 +15,6 @@ public class ModelsEntity {
   @Id
   private String id;
   private String name;
-  private Object banner;
+  private Object items;
 
 }

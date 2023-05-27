@@ -12,6 +12,7 @@ import com.mstore.entity.ModelsEntity;
 import com.mstore.entity.ProductsEntity;
 import com.mstore.model.ProductModel;
 import com.mstore.model.QueryModel;
+import com.mstore.service.FilterBuilderService;
 import com.mstore.service.ModelsService;
 import com.mstore.service.ProductsService;
 
@@ -23,6 +24,9 @@ public class HomeController {
 
   @Autowired
   ModelsService modelsService;
+
+  @Autowired
+  FilterBuilderService filterBuilderService;
 
   @GetMapping(path = "recommended")
   public List<ProductModel> fetchRecommendedProducts() {
@@ -47,6 +51,19 @@ public class HomeController {
       @RequestBody List<QueryModel> body) {
     page = page != null ? page - 1 : 0;
     size = size != null ? size : 12;
+    System.out.println(body);
     return productService.filterProducts(size, orders, page, body);
   }
+
+  @GetMapping(path = "get-products-list")
+  public Object fetchProductsList(
+      @RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+      @RequestParam(value = "size", required = false, defaultValue = "12") Integer size,
+      @RequestParam(value = "filter", required = false) String filter,
+      @RequestParam(value = "orders", required = false) String orders) {
+    return productService.filterProducts(size, orders, page,
+        this.filterBuilderService.generateFilterModel(filter));
+  }
+
+
 }
