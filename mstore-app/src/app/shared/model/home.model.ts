@@ -1,7 +1,7 @@
 export interface Home {
     id: string;
     name: string;
-    banner: Banner;
+    items: Banner;
 }
 
 export interface Banner {

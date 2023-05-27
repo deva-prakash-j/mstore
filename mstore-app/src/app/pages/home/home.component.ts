@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     this.productService.fetchModelData(environment.homeContentType).subscribe(result => {
       if(result && result.data) {
         let home: Home = result.data[0];
-        this.bannerObj = home.banner;
+        this.bannerObj = home.items;
         console.log(this.bannerObj);
       }
     })
