@@ -50,7 +50,6 @@ public class ProductsService {
 
   public Page<ProductsEntity> filterProducts(Integer size, String orders, Integer page,
       List<QueryModel> body) {
-    System.out.println(body);
     Pageable pageable = filterBuilderService.getPageable(size, page, orders);
     Query query = this.filterBuilderService.generateFilterQuery(body);
     query.with(pageable);

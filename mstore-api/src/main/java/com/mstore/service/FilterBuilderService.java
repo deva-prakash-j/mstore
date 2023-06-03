@@ -45,10 +45,13 @@ public class FilterBuilderService {
   }
 
   public List<QueryModel> generateFilterModel(String filter) {
+    List<QueryModel> queryModelList = new ArrayList<QueryModel>();
+    if (filter == null || filter.isEmpty()) {
+      return queryModelList;
+    }
     String[] arr = filter.split("##");
     String[] queryArr;
     String values;
-    List<QueryModel> queryModelList = new ArrayList<QueryModel>();
     QueryModel queryModel = null;
     for (String query : arr) {
       queryModel = new QueryModel();
