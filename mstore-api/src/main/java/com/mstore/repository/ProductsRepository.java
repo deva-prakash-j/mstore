@@ -18,4 +18,9 @@ public interface ProductsRepository extends MongoRepository<ProductsEntity, Stri
       + "      { \"$project\": {_id: 0, \"urlSlug\":{ $first: \"$categorySlugs\" }, \"displayText\": \"$_id\", brands: {$sortArray: { input: \"$brands\", sortBy: { displayText: 1 } }}}}]}}"})
   public List<ProductsEntity> fetchHeaderData();
 
+  @Aggregation(pipeline = {"db.products.aggregate(\r\n" + "  { $facet: {\r\n"
+      + "      brands: [{ $match: { categorySlug: \"?0\" } },{ $group: { _id: \"brands\", brands:{$addToSet:\"$brand\"} } }, { \"$project\": {_id: 0}}],\r\n"
+      + "  }}\r\n" + ")"})
+  public List<ProductsEntity> fetchFilterData(String categorySlug);
+
 }

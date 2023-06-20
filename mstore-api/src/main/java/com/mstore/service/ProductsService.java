@@ -48,6 +48,10 @@ public class ProductsService {
     return repo.fetchHeaderData();
   }
 
+  public List<ProductsEntity> fetchFilterData(String categorySlug) {
+    return repo.fetchFilterData(categorySlug);
+  }
+
   public Page<ProductsEntity> filterProducts(Integer size, String orders, Integer page,
       List<QueryModel> body) {
     Pageable pageable = filterBuilderService.getPageable(size, page, orders);

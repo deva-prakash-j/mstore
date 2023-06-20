@@ -55,14 +55,21 @@ public class HomeController {
     return productService.filterProducts(size, orders, page, body);
   }
 
-  @GetMapping(path = "get-products-list")
+  @GetMapping(path = "get-products-list/{categorySlug}")
   public Object fetchProductsList(
       @RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
       @RequestParam(value = "size", required = false, defaultValue = "12") Integer size,
       @RequestParam(value = "filter", required = false) String filter,
-      @RequestParam(value = "orders", required = false) String orders) {
+      @RequestParam(value = "orders", required = false) String orders,
+      @PathVariable String categorySlug) {
+    filter = "categorySlug$eq$" + categorySlug + "##" + filter;
     return productService.filterProducts(size, orders, page,
         this.filterBuilderService.generateFilterModel(filter));
+  }
+
+  @GetMapping(path = "get-filter-data/{categorySlug}")
+  public Object fetchFilterData(@PathVariable String categorySlug) {
+    return productService.fetchFilterData(categorySlug);
   }
 
 
